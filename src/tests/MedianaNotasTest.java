@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 
 import util.MisArrays;
 
-class Prueba {
+class MedianaNotasTest {
 
 	static ArrayList<Integer> notasValidas;
     static ArrayList<Integer> notasInvalidas;
@@ -23,15 +23,15 @@ class Prueba {
     }
 
     @Test
-    void testMediaNotasValidas() {
-        assertEquals(6.33, MisArrays.mediaNotas(notasValidas), 0.01);
+    void testMedianaNotasValidas() {
+        assertEquals(6, MisArrays.medianaNotas(notasValidas), 0.01);
     }
 
     @Test
-    void testMediaNotasInvalidas() {
+    void testMedianaNotasInvalidas() {
         assertThrows(IllegalArgumentException.class, () -> {
-            MisArrays.mediaNotas(notasInvalidas);
+            MisArrays.medianaNotas(notasInvalidas);
         });
-    }}
+    }
 
-
+}
